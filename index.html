@@ -4,187 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunwoo Kim</title>
-  <meta name="description" content="Sunwoo Kim — incoming PhD student at MIT EECS working on AI for biomedicine: diffusion model post-training, biomolecular design, and accelerating biomedical discovery." />
+  <meta name="description" content="Sunwoo Kim — incoming PhD student in EECS at MIT, working on machine learning for biology: generative models, diffusion post-training, and biomolecular design." />
   <meta name="author" content="Sunwoo Kim" />
-
-  <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sunwoo Kim" />
-  <meta property="og:description" content="Incoming PhD student at MIT EECS — AI for biomedicine." />
+  <meta property="og:description" content="Incoming PhD student in EECS at MIT — machine learning for biology." />
   <meta property="og:url" content="https://ksunw0209.github.io" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23faf7f1'/><text x='16' y='23' font-family='Georgia,serif' font-size='22' fill='%2322201c' text-anchor='middle'>S</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <main class="page">
+  <div class="page">
 
-    <!-- ===================== HEADER ===================== -->
-    <header class="hero">
-      <div class="hero__photo">
-        <!-- Swap in a real photo: drop a square image at assets/img/profile.jpg
-             and replace the <svg> below with:
+    <!-- ===================== IDENTITY RAIL ===================== -->
+    <aside class="rail">
+      <div class="rail__photo">
+        <!-- To use a real photo: drop a square image at assets/img/profile.jpg
+             and replace the <div class="ph">…</div> below with:
              <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
-        <svg viewBox="0 0 200 200" role="img" aria-label="Sunwoo Kim">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#6366f1" />
-              <stop offset="100%" stop-color="#0ea5a4" />
-            </linearGradient>
-          </defs>
-          <rect width="200" height="200" rx="100" fill="url(#g)" />
-          <text x="50%" y="50%" dy="0.35em" text-anchor="middle"
-                font-family="Newsreader, serif" font-size="84" fill="#fff">SK</text>
-        </svg>
+        <div class="ph">SK</div>
       </div>
-
-      <div class="hero__intro">
-        <h1 class="hero__name">Sunwoo Kim <span class="hero__name-kr">김선우</span></h1>
-        <p class="hero__role">Incoming PhD Student · MIT EECS</p>
-        <p class="hero__tagline">AI for biomedicine — making breakthroughs with AI to accelerate biomedical discovery.</p>
-
-        <nav class="links" aria-label="Profiles and contact">
-          <a class="link" href="mailto:ksunw0209@gmail.com" title="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.4l8 5 8-5V6H4zm16 2.5-7.4 4.6a1 1 0 0 1-1.2 0L4 8.5V18h16V8.5z"/></svg>
-            <span>Email</span>
-          </a>
-          <a class="link" href="https://github.com/ksunw0209" target="_blank" rel="noopener" title="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-            <span>GitHub</span>
-          </a>
-          <!-- TODO: replace # with your Google Scholar profile URL -->
-          <a class="link" href="#" target="_blank" rel="noopener" title="Google Scholar">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 1 8l11 6 9-4.9V16h2V8L12 2zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8z"/></svg>
-            <span>Scholar</span>
-          </a>
-          <!-- TODO: replace # with your LinkedIn profile URL -->
-          <a class="link" href="#" target="_blank" rel="noopener" title="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9V9z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-          <!-- TODO: replace # with your X / Twitter URL (or remove this link) -->
-          <a class="link" href="#" target="_blank" rel="noopener" title="X (Twitter)">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1 2h6.8l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20z"/></svg>
-            <span>X</span>
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section" id="about">
-      <p class="lead">
-        I'm an AI researcher who wants to make fundamental breakthroughs with AI and
-        use them to accelerate biomedical discovery. This fall I begin my PhD in
-        <strong>Electrical Engineering &amp; Computer Science at MIT</strong>, working at the
-        intersection of machine learning and biology. I graduated from
-        <strong>Seoul National University</strong> with a B.S. in Statistics.
-      </p>
-      <p>
-        Biology is where I think AI can matter most, but my deeper motivation is the
-        breakthrough itself: building methods that change what is possible. I like to
-        chase ideas by trying them directly — experiments, and wet-lab work when it
-        helps — and letting the results steer where I go next.
-      </p>
-    </section>
-
-    <!-- ===================== RESEARCH ===================== -->
-    <section class="section" id="research">
-      <h2 class="section__title">Research</h2>
-      <ul class="research">
-        <li>
-          <h3>AI for life sciences</h3>
-          <p>
-            Sharpening the <em>hypothesis-generation ↔ experiment-design</em> loop so that
-            discovery moves faster. A central question I care about is <strong>modality
-            transfer</strong> in biological data: how to carry information from modalities
-            that are easy to scale but information-poor (e.g., cell imaging) to those that
-            are hard to scale but information-rich (e.g., transcriptomics, genomics). I'm
-            especially drawn to precision medicine and to molecular- and cellular-level
-            modeling for cancer.
-          </p>
-        </li>
-        <li>
-          <h3>Diffusion model post-training</h3>
-          <p>
-            Improving diffusion generative models <em>after</em> pre-training — through
-            <strong>test-time scaling</strong> (spending more computation at generation time
-            for better samples) and <strong>reinforcement-learning–based alignment and
-            fine-tuning</strong>.
-          </p>
-        </li>
-        <li>
-          <h3>Biomolecular design &amp; structure prediction</h3>
-          <p>
-            Applying these methods to biology: designing proteins and antibodies toward a
-            target function, and predicting protein structure — two ends of one pipeline
-            from target to designed binder.
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===================== PUBLICATIONS ===================== -->
-    <section class="section" id="publications">
-      <h2 class="section__title">Selected publications</h2>
-      <ul class="pubs">
-        <li class="pub">
-          <div class="pub__venue"><span class="badge badge--spotlight">ICLR 2025 · Spotlight</span></div>
-          <div class="pub__body">
-            <!-- TODO: replace with the exact paper title and add a link (paper / arXiv / code) -->
-            <p class="pub__title">Test-time alignment of diffusion models via Sequential Monte Carlo</p>
-            <p class="pub__authors">Sunwoo Kim, with Dongmin Park and Kangwook Lee · KRAFTON AI</p>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="pub__venue"><span class="badge">ICLR 2026</span></div>
-          <div class="pub__body">
-            <!-- TODO: add the exact title, author list, and link for the robot-learning paper -->
-            <p class="pub__title">Robot learning <span class="muted">(title to be added)</span></p>
-            <p class="pub__authors">Sunwoo Kim et al.</p>
-          </div>
-        </li>
-      </ul>
-      <p class="note">Full and up-to-date list on <a href="#" target="_blank" rel="noopener">Google Scholar</a> <span class="muted">(add link)</span>.</p>
-    </section>
-
-    <!-- ===================== EDUCATION & EXPERIENCE ===================== -->
-    <section class="section section--split">
-      <div>
-        <h2 class="section__title">Education</h2>
-        <ul class="timeline">
-          <li>
-            <span class="timeline__when">Fall 2026 –</span>
-            <span class="timeline__what"><strong>Ph.D., EECS</strong>, MIT<br /><span class="muted">AI + Biology (AI for biomedicine)</span></span>
-          </li>
-          <li>
-            <span class="timeline__when">– 2026</span>
-            <span class="timeline__what"><strong>B.S., Statistics</strong>, Seoul National University</span>
-          </li>
+      <div class="rail__id">
+        <h1 class="rail__name">Sunwoo Kim<span class="rail__kr">김선우</span></h1>
+        <p class="rail__aff">Incoming PhD student<br />EECS, MIT</p>
+        <ul class="rail__links">
+          <li><a href="mailto:ksunw0209@gmail.com">Email</a></li>
+          <li><a href="https://github.com/ksunw0209" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+          <!-- TODO: replace # with your LinkedIn profile URL (or delete this line) -->
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <!-- TODO: replace # with your X / Twitter URL (or delete this line) -->
+          <li><a href="#" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
-      <div>
-        <h2 class="section__title">Experience</h2>
-        <ul class="timeline">
-          <li>
-            <span class="timeline__when">Jun – Dec 2024</span>
-            <span class="timeline__what"><strong>Research Intern</strong>, KRAFTON AI<br />
-              <span class="muted">Diffusion post-training (test-time alignment via SMC; ICLR 2025 Spotlight) and embodied small-language-model agents. Advised by Dr. Dongmin Park and Prof. Kangwook Lee.</span></span>
+    </aside>
+
+    <!-- ===================== CONTENT ===================== -->
+    <main class="content">
+
+      <section class="bio">
+        <p class="lead">
+          I'm beginning my PhD in Electrical Engineering and Computer Science at MIT this
+          fall, working on machine learning for biology. Before that, I studied statistics
+          at Seoul National University.
+        </p>
+        <p>
+          I'm drawn to problems where a methodological idea changes which experiments are
+          worth running. Most of my work so far has been on generative models — in
+          particular, post-training diffusion models through test-time scaling and
+          reinforcement learning — and applying those ideas to biomolecular design.
+        </p>
+        <p>
+          Going forward, I want to build models that make biomedical discovery faster:
+          tightening the loop between forming a hypothesis and designing the experiment
+          that tests it, and carrying information from biological data that is cheap but
+          shallow (such as cell imaging) into the richer, harder-to-scale measurements
+          (such as transcriptomics and genomics) — with an eye toward precision medicine
+          and cancer.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="label">News</h2>
+        <ul class="news">
+          <li><span class="when">2026</span><span class="what">Beginning my PhD in EECS at MIT this fall.</span></li>
+          <li><span class="when">2026</span><span class="what">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
+          <li><span class="when">2025</span><span class="what">“Test-time Alignment of Diffusion Models without Reward Over-optimization” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="label">Selected publications</h2>
+        <ul class="pubs">
+          <li class="pub">
+            <span class="t">Time-Optimal Execution of Action Chunk Policies Beyond Demonstration Speed</span>
+            <span class="meta"><span class="me">Sunwoo Kim</span>, J. Kim, J. J. Lim</span>
+            <span class="meta"><span class="v">International Conference on Learning Representations (ICLR)</span>, 2026</span>
+          </li>
+          <li class="pub">
+            <!-- TODO: verify which "S. Kim" is you in the author list below -->
+            <span class="t">Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement</span>
+            <span class="meta">S. Lee, <span class="me">Sunwoo Kim</span>, S. Kim, J. Park, D. Park</span>
+            <span class="meta"><span class="v">Preprint</span>, <a href="https://arxiv.org/abs/2511.05562" target="_blank" rel="noopener">arXiv:2511.05562</a>, 2025</span>
+          </li>
+          <li class="pub">
+            <span class="t">Iterative Distillation for Reward-Guided Fine-Tuning of Diffusion Models in Biomolecular Design</span>
+            <span class="meta">X. Su, X. Li, M. Uehara, <span class="me">Sunwoo Kim</span>, Y. Zhao, G. Scalia, E. Hajiramezanali, et al.</span>
+            <span class="meta"><span class="v">Preprint</span>, <a href="https://arxiv.org/abs/2507.00445" target="_blank" rel="noopener">arXiv:2507.00445</a>, 2025</span>
+          </li>
+          <li class="pub">
+            <span class="t">Test-time Alignment of Diffusion Models without Reward Over-optimization</span>
+            <span class="meta"><span class="me">Sunwoo Kim</span>, M. Kim, D. Park</span>
+            <span class="meta"><span class="v">International Conference on Learning Representations (ICLR)</span>, 2025 <span class="spot">(Spotlight)</span></span>
           </li>
         </ul>
-      </div>
-    </section>
+        <p class="pubs__more">
+          A full, up-to-date list is on
+          <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
+      </section>
 
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-      <p>Outside research, I play in a band and tinker with machine learning for financial time series.</p>
-      <p class="footer__meta">© <span id="year">2026</span> Sunwoo Kim · Built as a static page on GitHub Pages.</p>
-    </footer>
+      <section>
+        <h2 class="label">Education</h2>
+        <ul class="tl">
+          <li>
+            <span class="when">2026 —</span>
+            <span>Ph.D., Electrical Engineering &amp; Computer Science, MIT <span class="sub">— machine learning for biology</span></span>
+          </li>
+          <li>
+            <span class="when">— 2026</span>
+            <span>B.S., Statistics, Seoul National University</span>
+          </li>
+        </ul>
+      </section>
 
-  </main>
+      <section>
+        <h2 class="label">Experience</h2>
+        <ul class="tl">
+          <li>
+            <span class="when">Jun – Dec 2024</span>
+            <span>Research Intern, KRAFTON AI
+              <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year">2026</span> Sunwoo Kim · Last updated June 2026</p>
+      </footer>
+
+    </main>
+  </div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
