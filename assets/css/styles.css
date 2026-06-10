@@ -1,7 +1,8 @@
 /* ============================================================
    Sunwoo Kim — personal homepage
-   Editorial, warm, type-led. Fraunces (display + reading) paired
-   with Inter (interface), one restrained terracotta accent.
+   Editorial, warm, type-led. Fraunces (display + reading) +
+   Inter (interface); one restrained terracotta accent.
+   Single column; aligned header + date/content grid rows.
    Static, no build step.
    ============================================================ */
 
@@ -43,7 +44,7 @@ a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid rgba(176, 78, 52, 0.28);
-  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
@@ -61,40 +62,58 @@ strong { font-weight: 600; }
 /* ---------------- Header ---------------- */
 .header {
   display: flex;
-  gap: clamp(1.5rem, 4vw, 2.4rem);
+  gap: clamp(1.4rem, 4vw, 1.9rem);
   align-items: center;
-  padding-bottom: clamp(1.6rem, 4vw, 2.2rem);
-  margin-bottom: clamp(1.8rem, 4vw, 2.4rem);
+  padding-bottom: clamp(1.7rem, 4vw, 2.2rem);
+  margin-bottom: clamp(1.9rem, 4vw, 2.5rem);
   border-bottom: 1px solid var(--line);
 }
-.header__main { flex: 1 1 auto; min-width: 0; }
 
+.header__photo { flex: 0 0 auto; width: 116px; height: 116px; }
+.header__photo img,
+.header__photo .ph {
+  width: 100%; height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 10px 28px rgba(40, 30, 20, 0.13);
+}
+.header__photo .ph {
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  color: var(--accent);
+  font-family: var(--serif);
+  font-weight: 500; font-size: 2.05rem; letter-spacing: 0.02em;
+}
+
+.header__main { flex: 1 1 auto; min-width: 0; }
 .name {
   font-family: var(--serif);
   font-weight: 560;
-  font-size: clamp(2.5rem, 7vw, 3.4rem);
-  line-height: 1.02;
+  font-size: clamp(2.05rem, 6vw, 2.85rem);
+  line-height: 1.05;
   letter-spacing: -0.02em;
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.4rem;
 }
-.name__kr { font-weight: 400; color: var(--faint); font-size: 0.42em; letter-spacing: 0; margin-left: 0.5rem; vertical-align: 0.12em; }
-
+.name__kr {
+  font-weight: 400;
+  font-size: 0.46em;
+  color: var(--faint);
+  letter-spacing: 0;
+  margin-left: 0.55rem;
+}
 .role {
   font-family: var(--sans);
-  font-size: 0.78rem; font-weight: 600;
+  font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--soft);
-  margin: 0 0 1.05rem;
+  margin: 0 0 0.95rem;
 }
-.role .dot { color: var(--accent); margin: 0 0.5em; }
+.role .dot { color: var(--accent); margin: 0 0.45em; }
 
-.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; font-family: var(--sans); font-size: 0.9rem; }
-.links a {
-  position: relative;
-  color: var(--ink);
-  border-bottom: none;
-  padding-bottom: 2px;
-}
+.links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; font-family: var(--sans); font-size: 0.89rem; }
+.links a { position: relative; color: var(--ink); border-bottom: none; padding-bottom: 2px; }
 .links a::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0;
   height: 1.5px; background: var(--accent);
@@ -105,111 +124,70 @@ strong { font-weight: 600; }
 .links a:hover::after { transform: scaleX(1); }
 .links .sep { color: var(--faint); user-select: none; }
 
-.header__photo { flex: 0 0 auto; width: 116px; height: 116px; }
-.header__photo img,
-.header__photo .ph {
-  width: 100%; height: 100%;
-  border-radius: 4px;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 10px 30px rgba(40, 30, 20, 0.14);
-}
-.header__photo .ph {
-  display: flex; align-items: center; justify-content: center;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  color: var(--accent);
-  font-family: var(--serif);
-  font-weight: 500; font-size: 2.1rem; letter-spacing: 0.02em;
-}
-@media (max-width: 560px) {
-  .header { flex-direction: column-reverse; align-items: flex-start; }
-  .header__photo { width: 92px; height: 92px; }
+@media (max-width: 540px) {
+  .header { gap: 1.2rem; align-items: flex-start; }
+  .header__photo { width: 84px; height: 84px; }
+  .header__photo .ph { font-size: 1.55rem; }
+  .lead { font-size: 1.13rem; line-height: 1.55; }
 }
 
 /* ---------------- Lead / bio ---------------- */
-.lead {
-  font-size: 1.27rem;
-  line-height: 1.58;
-  margin: 0 0 1.15rem;
-}
-.lead::first-letter {
-  font-weight: 560;
-  font-size: 3.3em;
-  line-height: 0.78;
-  float: left;
-  margin: 0.05em 0.1em 0 0;
-  color: var(--accent);
-}
+.lead { font-size: 1.24rem; line-height: 1.6; margin: 0 0 1.15rem; }
 .bio p { margin: 0 0 1.1rem; }
 .bio p:last-child { margin-bottom: 0; }
 
 /* ---------------- Section label ---------------- */
 .block { margin-top: clamp(2.6rem, 6vw, 3.4rem); }
 .label {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
+  display: flex; align-items: center; gap: 0.7rem;
   font-family: var(--sans);
   font-size: 0.74rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--soft);
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.3rem;
 }
-.label::before {
-  content: "";
-  width: 1.7rem; height: 2px;
-  background: var(--accent);
-  flex: 0 0 auto;
-}
+.label::before { content: ""; width: 1.7rem; height: 2px; background: var(--accent); flex: 0 0 auto; }
 
-/* ---------------- News ---------------- */
-.news { list-style: none; margin: 0; padding: 0; }
-.news li { display: flex; gap: 1.1rem; margin: 0 0 0.7rem; }
-.news li:last-child { margin-bottom: 0; }
-.news .yr {
-  flex: 0 0 2.6rem;
-  font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
+/* ---------------- Date/content grid rows (News, Education, Experience) ---------------- */
+.rows { list-style: none; margin: 0; padding: 0; }
+.rows li { display: grid; grid-template-columns: var(--metaw, 3rem) 1fr; gap: 0.2rem 1.3rem; }
+.rows li + li { margin-top: var(--rowgap, 0.7rem); }
+.rows .when {
+  font-family: var(--sans);
+  font-size: 0.78rem; font-weight: 600;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
-  padding-top: 0.32em;
+  letter-spacing: 0.03em;
+  padding-top: 0.34em;
 }
-.news .txt { flex: 1; }
+.rows .what { min-width: 0; }
+.rows .what .role-t { font-weight: 500; }
+.rows .what .sub { color: var(--soft); }
+
+.cv { --metaw: 8.5rem; --rowgap: 1.15rem; }
+.cv .when { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.74rem; }
+
+@media (max-width: 540px) {
+  .rows li { grid-template-columns: 1fr; gap: 0.1rem; }
+  .rows .when { padding-top: 0; }
+  .rows li + li { margin-top: 0.85rem; }
+  .cv { --rowgap: 1rem; }
+}
 
 /* ---------------- Publications ---------------- */
 .pubs { list-style: none; margin: 0; padding: 0; }
 .pub { padding: 1.05rem 0; border-bottom: 1px solid var(--line); }
 .pub:first-child { padding-top: 0; }
 .pub:last-child { border-bottom: none; padding-bottom: 0; }
-.pub__title { font-weight: 500; font-size: 1.12rem; line-height: 1.38; }
-.pub__authors { font-family: var(--sans); font-size: 0.86rem; color: var(--soft); margin-top: 0.3rem; }
+.pub__title { font-weight: 500; font-size: 1.1rem; line-height: 1.4; }
+.pub__authors { font-family: var(--sans); font-size: 0.85rem; color: var(--soft); margin-top: 0.3rem; }
 .pub__authors .me { color: var(--ink); font-weight: 600; }
-.pub__venue {
-  font-family: var(--sans);
-  font-size: 0.81rem; letter-spacing: 0.01em;
-  color: var(--faint);
-  margin-top: 0.25rem;
-}
-.pub__venue .v { font-style: normal; color: var(--soft); }
+.pub__venue { font-family: var(--sans); font-size: 0.8rem; color: var(--faint); margin-top: 0.25rem; }
+.pub__venue .v { color: var(--soft); }
 .pub__venue .spot { color: var(--accent); font-weight: 600; }
 .pub__venue a { color: var(--soft); border-bottom-color: rgba(111,104,92,0.3); }
 .pub__venue a:hover { color: var(--accent-deep); border-bottom-color: var(--accent-deep); }
-.more { margin: 1.2rem 0 0; font-family: var(--sans); font-size: 0.87rem; color: var(--soft); }
-
-/* ---------------- Education / Experience ---------------- */
-.entries { list-style: none; margin: 0; padding: 0; }
-.entry { margin: 0 0 1.2rem; }
-.entry:last-child { margin-bottom: 0; }
-.entry .when {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.74rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.12rem;
-}
-.entry .what { line-height: 1.5; }
-.entry .sub { color: var(--soft); font-size: 0.97rem; }
+.more { margin: 1.2rem 0 0; font-family: var(--sans); font-size: 0.86rem; color: var(--soft); }
 
 /* ---------------- Footer ---------------- */
 .footer {

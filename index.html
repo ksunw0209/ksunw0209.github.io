@@ -22,6 +22,12 @@
 
     <!-- ===================== HEADER ===================== -->
     <header class="header">
+      <div class="header__photo">
+        <!-- To use a real photo: drop a square image at assets/img/profile.jpg
+             and replace the <div class="ph">…</div> below with:
+             <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
+        <div class="ph">SK</div>
+      </div>
       <div class="header__main">
         <h1 class="name">Sunwoo Kim<span class="name__kr">김선우</span></h1>
         <p class="role">Incoming PhD <span class="dot">·</span> EECS, MIT</p>
@@ -34,12 +40,6 @@
           <!-- TODO: replace # with your X / Twitter URL (or delete this link + its separator) -->
           <a href="#" target="_blank" rel="noopener">X</a>
         </nav>
-      </div>
-      <div class="header__photo">
-        <!-- To use a real photo: drop a square image at assets/img/profile.jpg
-             and replace the <div class="ph">…</div> below with:
-             <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
-        <div class="ph">SK</div>
       </div>
     </header>
 
@@ -69,10 +69,10 @@
     <!-- ===================== NEWS ===================== -->
     <section class="block">
       <h2 class="label">News</h2>
-      <ul class="news">
-        <li><span class="yr">2026</span><span class="txt">Beginning my PhD in EECS at MIT this fall.</span></li>
-        <li><span class="yr">2026</span><span class="txt">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
-        <li><span class="yr">2025</span><span class="txt">“Test-time Alignment of Diffusion Models without Reward Over-optimization” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
+      <ul class="rows">
+        <li><span class="when">2026</span><span class="what">Beginning my PhD in EECS at MIT this fall.</span></li>
+        <li><span class="when">2026</span><span class="what">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
+        <li><span class="when">2025</span><span class="what">“Test-time Alignment of Diffusion Models without Reward Over-optimization” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
       </ul>
     </section>
 
@@ -108,15 +108,14 @@
     <!-- ===================== EDUCATION ===================== -->
     <section class="block">
       <h2 class="label">Education</h2>
-      <ul class="entries">
-        <li class="entry">
+      <ul class="rows cv">
+        <li>
           <span class="when">2026 — present</span>
-          <div class="what">Ph.D., Electrical Engineering &amp; Computer Science, MIT
-            <span class="sub">— machine learning for biology</span></div>
+          <span class="what"><span class="role-t">Ph.D., Electrical Engineering &amp; Computer Science</span>, MIT <span class="sub">— machine learning for biology</span></span>
         </li>
-        <li class="entry">
+        <li>
           <span class="when">— 2026</span>
-          <div class="what">B.S., Statistics, Seoul National University</div>
+          <span class="what"><span class="role-t">B.S., Statistics</span>, Seoul National University</span>
         </li>
       </ul>
     </section>
@@ -124,11 +123,11 @@
     <!-- ===================== EXPERIENCE ===================== -->
     <section class="block">
       <h2 class="label">Experience</h2>
-      <ul class="entries">
-        <li class="entry">
+      <ul class="rows cv">
+        <li>
           <span class="when">Jun – Dec 2024</span>
-          <div class="what">Research Intern, KRAFTON AI
-            <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span></div>
+          <span class="what"><span class="role-t">Research Intern</span>, KRAFTON AI
+            <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span></span>
         </li>
       </ul>
     </section>
