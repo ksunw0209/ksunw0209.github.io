@@ -11,27 +11,21 @@
   <meta property="og:description" content="Incoming PhD student in EECS at MIT — machine learning for biology." />
   <meta property="og:url" content="https://ksunw0209.github.io" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f6a5b'/><text x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23fbfaf7' text-anchor='middle'>S</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23b04e34'/><text x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23f7f4ed' text-anchor='middle'>S</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,560;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <div class="wrap">
+  <main class="page">
 
-    <!-- ===================== HERO ===================== -->
-    <header class="hero">
-      <div class="hero__photo">
-        <!-- To use a real photo: drop a square image at assets/img/profile.jpg
-             and replace the <div class="ph">…</div> below with:
-             <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
-        <div class="ph">SK</div>
-      </div>
-      <div class="hero__text">
-        <h1 class="hero__name">Sunwoo Kim<span class="hero__kr">김선우</span></h1>
-        <p class="hero__role">Incoming PhD · EECS, MIT</p>
-        <nav class="hero__links" aria-label="Contact and profiles">
+    <!-- ===================== HEADER ===================== -->
+    <header class="header">
+      <div class="header__main">
+        <h1 class="name">Sunwoo Kim<span class="name__kr">김선우</span></h1>
+        <p class="role">Incoming PhD <span class="dot">·</span> EECS, MIT</p>
+        <nav class="links" aria-label="Contact and profiles">
           <a href="mailto:ksunw0209@gmail.com">Email</a><span class="sep">·</span>
           <a href="https://github.com/ksunw0209" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
           <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Scholar</a><span class="sep">·</span>
@@ -40,6 +34,12 @@
           <!-- TODO: replace # with your X / Twitter URL (or delete this link + its separator) -->
           <a href="#" target="_blank" rel="noopener">X</a>
         </nav>
+      </div>
+      <div class="header__photo">
+        <!-- To use a real photo: drop a square image at assets/img/profile.jpg
+             and replace the <div class="ph">…</div> below with:
+             <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
+        <div class="ph">SK</div>
       </div>
     </header>
 
@@ -68,7 +68,7 @@
 
     <!-- ===================== NEWS ===================== -->
     <section class="block">
-      <h2 class="sec"><span class="sec__no">01</span><span class="sec__name">News</span></h2>
+      <h2 class="label">News</h2>
       <ul class="news">
         <li><span class="yr">2026</span><span class="txt">Beginning my PhD in EECS at MIT this fall.</span></li>
         <li><span class="yr">2026</span><span class="txt">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
@@ -78,28 +78,28 @@
 
     <!-- ===================== PUBLICATIONS ===================== -->
     <section class="block">
-      <h2 class="sec"><span class="sec__no">02</span><span class="sec__name">Selected publications</span></h2>
+      <h2 class="label">Selected publications</h2>
       <ul class="pubs">
         <li class="pub">
           <div class="pub__title">Time-Optimal Execution of Action Chunk Policies Beyond Demonstration Speed</div>
           <div class="pub__authors"><span class="me">Sunwoo Kim</span>, J. Kim, J. J. Lim</div>
-          <div class="pub__tags"><span class="tag">ICLR 2026</span><span class="pub__year">2026</span></div>
+          <div class="pub__venue"><span class="v">ICLR</span> · 2026</div>
         </li>
         <li class="pub">
           <!-- TODO: verify which "S. Kim" in the author list is you -->
           <div class="pub__title">Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement</div>
           <div class="pub__authors">S. Lee, <span class="me">Sunwoo Kim</span>, S. Kim, J. Park, D. Park</div>
-          <div class="pub__tags"><a class="tag" href="https://arxiv.org/abs/2511.05562" target="_blank" rel="noopener">arXiv:2511.05562</a><span class="pub__year">2025</span></div>
+          <div class="pub__venue"><a href="https://arxiv.org/abs/2511.05562" target="_blank" rel="noopener">arXiv:2511.05562</a> · 2025</div>
         </li>
         <li class="pub">
           <div class="pub__title">Iterative Distillation for Reward-Guided Fine-Tuning of Diffusion Models in Biomolecular Design</div>
           <div class="pub__authors">X. Su, X. Li, M. Uehara, <span class="me">Sunwoo Kim</span>, Y. Zhao, G. Scalia, E. Hajiramezanali, et al.</div>
-          <div class="pub__tags"><a class="tag" href="https://arxiv.org/abs/2507.00445" target="_blank" rel="noopener">arXiv:2507.00445</a><span class="pub__year">2025</span></div>
+          <div class="pub__venue"><a href="https://arxiv.org/abs/2507.00445" target="_blank" rel="noopener">arXiv:2507.00445</a> · 2025</div>
         </li>
         <li class="pub">
           <div class="pub__title">Test-time Alignment of Diffusion Models without Reward Over-optimization</div>
           <div class="pub__authors"><span class="me">Sunwoo Kim</span>, M. Kim, D. Park</div>
-          <div class="pub__tags"><span class="tag">ICLR 2025</span><span class="tag tag--spot">Spotlight</span><span class="pub__year">2025</span></div>
+          <div class="pub__venue"><span class="v">ICLR</span> · 2025 · <span class="spot">Spotlight</span></div>
         </li>
       </ul>
       <p class="more">Full, up-to-date list on <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
@@ -107,28 +107,28 @@
 
     <!-- ===================== EDUCATION ===================== -->
     <section class="block">
-      <h2 class="sec"><span class="sec__no">03</span><span class="sec__name">Education</span></h2>
-      <ul class="tl">
-        <li>
+      <h2 class="label">Education</h2>
+      <ul class="entries">
+        <li class="entry">
           <span class="when">2026 — present</span>
-          Ph.D., Electrical Engineering &amp; Computer Science, MIT
-          <span class="sub">— machine learning for biology</span>
+          <div class="what">Ph.D., Electrical Engineering &amp; Computer Science, MIT
+            <span class="sub">— machine learning for biology</span></div>
         </li>
-        <li>
+        <li class="entry">
           <span class="when">— 2026</span>
-          B.S., Statistics, Seoul National University
+          <div class="what">B.S., Statistics, Seoul National University</div>
         </li>
       </ul>
     </section>
 
     <!-- ===================== EXPERIENCE ===================== -->
     <section class="block">
-      <h2 class="sec"><span class="sec__no">04</span><span class="sec__name">Experience</span></h2>
-      <ul class="tl">
-        <li>
+      <h2 class="label">Experience</h2>
+      <ul class="entries">
+        <li class="entry">
           <span class="when">Jun – Dec 2024</span>
-          Research Intern, KRAFTON AI
-          <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span>
+          <div class="what">Research Intern, KRAFTON AI
+            <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span></div>
         </li>
       </ul>
     </section>
@@ -137,7 +137,7 @@
       <p>© <span id="year">2026</span> Sunwoo Kim · Last updated June 2026</p>
     </footer>
 
-  </div>
+  </main>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
