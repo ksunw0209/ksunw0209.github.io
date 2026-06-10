@@ -19,7 +19,7 @@
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --maxw: 660px;
+  --maxw: 720px;
 }
 
 * { box-sizing: border-box; }
