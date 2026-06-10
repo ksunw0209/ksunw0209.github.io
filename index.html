@@ -11,133 +11,132 @@
   <meta property="og:description" content="Incoming PhD student in EECS at MIT — machine learning for biology." />
   <meta property="og:url" content="https://ksunw0209.github.io" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23faf7f1'/><text x='16' y='23' font-family='Georgia,serif' font-size='22' fill='%2322201c' text-anchor='middle'>S</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231f6a5b'/><text x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23fbfaf7' text-anchor='middle'>S</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <div class="page">
+  <div class="wrap">
 
-    <!-- ===================== IDENTITY RAIL ===================== -->
-    <aside class="rail">
-      <div class="rail__photo">
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="hero__photo">
         <!-- To use a real photo: drop a square image at assets/img/profile.jpg
              and replace the <div class="ph">…</div> below with:
              <img src="assets/img/profile.jpg" alt="Sunwoo Kim" /> -->
         <div class="ph">SK</div>
       </div>
-      <div class="rail__id">
-        <h1 class="rail__name">Sunwoo Kim<span class="rail__kr">김선우</span></h1>
-        <p class="rail__aff">Incoming PhD student<br />EECS, MIT</p>
-        <ul class="rail__links">
-          <li><a href="mailto:ksunw0209@gmail.com">Email</a></li>
-          <li><a href="https://github.com/ksunw0209" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-          <!-- TODO: replace # with your LinkedIn profile URL (or delete this line) -->
-          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-          <!-- TODO: replace # with your X / Twitter URL (or delete this line) -->
-          <li><a href="#" target="_blank" rel="noopener">X</a></li>
-        </ul>
+      <div class="hero__text">
+        <h1 class="hero__name">Sunwoo Kim<span class="hero__kr">김선우</span></h1>
+        <p class="hero__role">Incoming PhD · EECS, MIT</p>
+        <nav class="hero__links" aria-label="Contact and profiles">
+          <a href="mailto:ksunw0209@gmail.com">Email</a><span class="sep">·</span>
+          <a href="https://github.com/ksunw0209" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
+          <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Scholar</a><span class="sep">·</span>
+          <!-- TODO: replace # with your LinkedIn URL (or delete this link + its separator) -->
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+          <!-- TODO: replace # with your X / Twitter URL (or delete this link + its separator) -->
+          <a href="#" target="_blank" rel="noopener">X</a>
+        </nav>
       </div>
-    </aside>
+    </header>
 
-    <!-- ===================== CONTENT ===================== -->
-    <main class="content">
+    <!-- ===================== LEAD / BIO ===================== -->
+    <p class="lead">
+      I'm beginning my PhD in Electrical Engineering &amp; Computer Science at MIT this
+      fall, working on machine learning for biology. Before that, I studied statistics
+      at Seoul National University.
+    </p>
+    <div class="bio">
+      <p>
+        I'm drawn to problems where a methodological idea changes which experiments are
+        worth running. Most of my work so far has been on generative models — in
+        particular, post-training diffusion models through test-time scaling and
+        reinforcement learning — and applying those ideas to biomolecular design.
+      </p>
+      <p>
+        Going forward, I want to build models that make biomedical discovery faster:
+        tightening the loop between forming a hypothesis and designing the experiment
+        that tests it, and carrying information from biological data that is cheap but
+        shallow (such as cell imaging) into the richer, harder-to-scale measurements
+        (such as transcriptomics and genomics) — with an eye toward precision medicine
+        and cancer.
+      </p>
+    </div>
 
-      <section class="bio">
-        <p class="lead">
-          I'm beginning my PhD in Electrical Engineering and Computer Science at MIT this
-          fall, working on machine learning for biology. Before that, I studied statistics
-          at Seoul National University.
-        </p>
-        <p>
-          I'm drawn to problems where a methodological idea changes which experiments are
-          worth running. Most of my work so far has been on generative models — in
-          particular, post-training diffusion models through test-time scaling and
-          reinforcement learning — and applying those ideas to biomolecular design.
-        </p>
-        <p>
-          Going forward, I want to build models that make biomedical discovery faster:
-          tightening the loop between forming a hypothesis and designing the experiment
-          that tests it, and carrying information from biological data that is cheap but
-          shallow (such as cell imaging) into the richer, harder-to-scale measurements
-          (such as transcriptomics and genomics) — with an eye toward precision medicine
-          and cancer.
-        </p>
-      </section>
+    <!-- ===================== NEWS ===================== -->
+    <section class="block">
+      <h2 class="sec"><span class="sec__no">01</span><span class="sec__name">News</span></h2>
+      <ul class="news">
+        <li><span class="yr">2026</span><span class="txt">Beginning my PhD in EECS at MIT this fall.</span></li>
+        <li><span class="yr">2026</span><span class="txt">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
+        <li><span class="yr">2025</span><span class="txt">“Test-time Alignment of Diffusion Models without Reward Over-optimization” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
+      </ul>
+    </section>
 
-      <section>
-        <h2 class="label">News</h2>
-        <ul class="news">
-          <li><span class="when">2026</span><span class="what">Beginning my PhD in EECS at MIT this fall.</span></li>
-          <li><span class="when">2026</span><span class="what">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
-          <li><span class="when">2025</span><span class="what">“Test-time Alignment of Diffusion Models without Reward Over-optimization” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
-        </ul>
-      </section>
+    <!-- ===================== PUBLICATIONS ===================== -->
+    <section class="block">
+      <h2 class="sec"><span class="sec__no">02</span><span class="sec__name">Selected publications</span></h2>
+      <ul class="pubs">
+        <li class="pub">
+          <div class="pub__title">Time-Optimal Execution of Action Chunk Policies Beyond Demonstration Speed</div>
+          <div class="pub__authors"><span class="me">Sunwoo Kim</span>, J. Kim, J. J. Lim</div>
+          <div class="pub__tags"><span class="tag">ICLR 2026</span><span class="pub__year">2026</span></div>
+        </li>
+        <li class="pub">
+          <!-- TODO: verify which "S. Kim" in the author list is you -->
+          <div class="pub__title">Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement</div>
+          <div class="pub__authors">S. Lee, <span class="me">Sunwoo Kim</span>, S. Kim, J. Park, D. Park</div>
+          <div class="pub__tags"><a class="tag" href="https://arxiv.org/abs/2511.05562" target="_blank" rel="noopener">arXiv:2511.05562</a><span class="pub__year">2025</span></div>
+        </li>
+        <li class="pub">
+          <div class="pub__title">Iterative Distillation for Reward-Guided Fine-Tuning of Diffusion Models in Biomolecular Design</div>
+          <div class="pub__authors">X. Su, X. Li, M. Uehara, <span class="me">Sunwoo Kim</span>, Y. Zhao, G. Scalia, E. Hajiramezanali, et al.</div>
+          <div class="pub__tags"><a class="tag" href="https://arxiv.org/abs/2507.00445" target="_blank" rel="noopener">arXiv:2507.00445</a><span class="pub__year">2025</span></div>
+        </li>
+        <li class="pub">
+          <div class="pub__title">Test-time Alignment of Diffusion Models without Reward Over-optimization</div>
+          <div class="pub__authors"><span class="me">Sunwoo Kim</span>, M. Kim, D. Park</div>
+          <div class="pub__tags"><span class="tag">ICLR 2025</span><span class="tag tag--spot">Spotlight</span><span class="pub__year">2025</span></div>
+        </li>
+      </ul>
+      <p class="more">Full, up-to-date list on <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </section>
 
-      <section>
-        <h2 class="label">Selected publications</h2>
-        <ul class="pubs">
-          <li class="pub">
-            <span class="t">Time-Optimal Execution of Action Chunk Policies Beyond Demonstration Speed</span>
-            <span class="meta"><span class="me">Sunwoo Kim</span>, J. Kim, J. J. Lim</span>
-            <span class="meta"><span class="v">International Conference on Learning Representations (ICLR)</span>, 2026</span>
-          </li>
-          <li class="pub">
-            <!-- TODO: verify which "S. Kim" is you in the author list below -->
-            <span class="t">Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement</span>
-            <span class="meta">S. Lee, <span class="me">Sunwoo Kim</span>, S. Kim, J. Park, D. Park</span>
-            <span class="meta"><span class="v">Preprint</span>, <a href="https://arxiv.org/abs/2511.05562" target="_blank" rel="noopener">arXiv:2511.05562</a>, 2025</span>
-          </li>
-          <li class="pub">
-            <span class="t">Iterative Distillation for Reward-Guided Fine-Tuning of Diffusion Models in Biomolecular Design</span>
-            <span class="meta">X. Su, X. Li, M. Uehara, <span class="me">Sunwoo Kim</span>, Y. Zhao, G. Scalia, E. Hajiramezanali, et al.</span>
-            <span class="meta"><span class="v">Preprint</span>, <a href="https://arxiv.org/abs/2507.00445" target="_blank" rel="noopener">arXiv:2507.00445</a>, 2025</span>
-          </li>
-          <li class="pub">
-            <span class="t">Test-time Alignment of Diffusion Models without Reward Over-optimization</span>
-            <span class="meta"><span class="me">Sunwoo Kim</span>, M. Kim, D. Park</span>
-            <span class="meta"><span class="v">International Conference on Learning Representations (ICLR)</span>, 2025 <span class="spot">(Spotlight)</span></span>
-          </li>
-        </ul>
-        <p class="pubs__more">
-          A full, up-to-date list is on
-          <a href="https://scholar.google.com/citations?user=BowEQLsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
-        </p>
-      </section>
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="block">
+      <h2 class="sec"><span class="sec__no">03</span><span class="sec__name">Education</span></h2>
+      <ul class="tl">
+        <li>
+          <span class="when">2026 — present</span>
+          Ph.D., Electrical Engineering &amp; Computer Science, MIT
+          <span class="sub">— machine learning for biology</span>
+        </li>
+        <li>
+          <span class="when">— 2026</span>
+          B.S., Statistics, Seoul National University
+        </li>
+      </ul>
+    </section>
 
-      <section>
-        <h2 class="label">Education</h2>
-        <ul class="tl">
-          <li>
-            <span class="when">2026 —</span>
-            <span>Ph.D., Electrical Engineering &amp; Computer Science, MIT <span class="sub">— machine learning for biology</span></span>
-          </li>
-          <li>
-            <span class="when">— 2026</span>
-            <span>B.S., Statistics, Seoul National University</span>
-          </li>
-        </ul>
-      </section>
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="block">
+      <h2 class="sec"><span class="sec__no">04</span><span class="sec__name">Experience</span></h2>
+      <ul class="tl">
+        <li>
+          <span class="when">Jun – Dec 2024</span>
+          Research Intern, KRAFTON AI
+          <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span>
+        </li>
+      </ul>
+    </section>
 
-      <section>
-        <h2 class="label">Experience</h2>
-        <ul class="tl">
-          <li>
-            <span class="when">Jun – Dec 2024</span>
-            <span>Research Intern, KRAFTON AI
-              <span class="sub">— diffusion post-training (test-time alignment via Sequential Monte Carlo; ICLR 2025 Spotlight) and embodied small-language-model agents, with Dongmin Park and Kangwook Lee.</span></span>
-          </li>
-        </ul>
-      </section>
+    <footer class="footer">
+      <p>© <span id="year">2026</span> Sunwoo Kim · Last updated June 2026</p>
+    </footer>
 
-      <footer class="footer">
-        <p>© <span id="year">2026</span> Sunwoo Kim · Last updated June 2026</p>
-      </footer>
-
-    </main>
   </div>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
