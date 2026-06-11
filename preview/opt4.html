@@ -1,83 +1,90 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'><link rel=preconnect href='https://fonts.googleapis.com'><link rel=preconnect href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap' rel=stylesheet><style>
-:root {
-  --bg: #f5f4f1; --bg-2: #ffffff; --ink: #19191b; --soft: #5e5e63;
-  --faint: #9b9ba1; --line: #e6e6e3;
-  --accent: #7d3350; --accent-deep: #5e2540; --accent-tint: #f0e3ea;
-  --serif: 'Inter',system-ui,sans-serif; --sans: 'Inter',system-ui,sans-serif; --display: 'Space Grotesk',sans-serif;
-  --maxw: 820px;
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'><link rel=preconnect href='https://fonts.googleapis.com'><link rel=preconnect href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=Inter:wght@400;500;600;700&display=swap' rel=stylesheet><style>:root{--bg:#f6f5f1;--surface:#ffffff;--ink:#1d211c;--soft:#5f655b;--faint:#9aa093;--line:#e2e3d8;--accent:#2f6b54;--accent-deep:#1f4d3b;--accent-tint:#e6efe8;--display:'Fraunces',Georgia,serif;--body:'Inter',system-ui,sans-serif;--label-font:'Inter',system-ui,sans-serif;--fs:18px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-optical-sizing:auto;font-size:var(--fs,18px);line-height:1.68;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+::selection{background:var(--accent-tint)}
+a{color:var(--accent);text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb,var(--accent) 30%,transparent);transition:.15s}
+a:hover{color:var(--accent-deep);border-bottom-color:var(--accent-deep)}
+strong{font-weight:600}
+.optbadge{position:fixed;inset:0 0 auto 0;text-align:center;font-family:var(--label-font);
+  font-size:.8rem;font-weight:600;letter-spacing:.04em;color:#fff;background:var(--accent);padding:.5rem;z-index:20}
+.page{max-width:760px;margin:0 auto;padding:clamp(4rem,8vw,6rem) clamp(1.4rem,6vw,2.5rem) 3.5rem}
+
+.header{display:flex;gap:clamp(1.4rem,4vw,1.9rem);align-items:center;
+  padding-bottom:clamp(1.7rem,4vw,2.2rem);margin-bottom:clamp(1.9rem,4vw,2.5rem);border-bottom:1px solid var(--line)}
+.header__photo{flex:0 0 auto;width:116px;height:116px}
+.header__photo .ph{width:100%;height:100%;border-radius:4px;display:flex;align-items:center;justify-content:center;
+  background:var(--surface);border:1px solid var(--line);color:var(--accent);font-family:var(--display);
+  font-weight:600;font-size:2.05rem;box-shadow:0 10px 28px rgba(0,0,0,.10)}
+.header__main{flex:1 1 auto;min-width:0}
+.name{font-family:var(--display);font-weight:600;font-size:clamp(2.05rem,6vw,2.8rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 .4rem}
+.name__kr{font-weight:400;font-size:.46em;color:var(--faint);margin-left:.5rem}
+.role{font-family:var(--label-font);font-size:.76rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--soft);margin:0 0 .95rem}
+.role .dot{color:var(--accent);margin:0 .45em}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem;font-family:var(--label-font);font-size:.89rem}
+.links a{position:relative;color:var(--ink);border-bottom:none;padding-bottom:2px}
+.links a:hover{color:var(--accent)}
+.links .sep{color:var(--faint)}
+
+.lead{font-size:1.22rem;line-height:1.55;margin:0 0 1.1rem}
+.bio p{margin:0 0 1rem}.bio p:last-child{margin:0}
+
+.block{margin-top:clamp(2.4rem,6vw,3.1rem)}
+.label{display:flex;align-items:center;gap:.7rem;font-family:var(--label-font);font-size:.74rem;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin:0 0 1.2rem}
+.label::before{content:"";width:1.7rem;height:2px;background:var(--accent);flex:0 0 auto}
+
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:var(--metaw,3rem) 1fr;gap:.2rem 1.3rem}
+.rows li+li{margin-top:var(--rowgap,.7rem)}
+.rows .when{font-family:var(--label-font);font-size:.78rem;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;letter-spacing:.03em;padding-top:.32em}
+.rows .what .role-t{font-weight:600}.rows .what .sub{color:var(--soft)}
+.cv{--metaw:9.5rem;--rowgap:1.05rem}
+.cv .when{text-transform:uppercase;letter-spacing:.05em;font-size:.73rem}
+
+.pubs{list-style:none;margin:0;padding:0}
+.subhead{font-family:var(--label-font);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:1.2rem 0 .5rem}
+.subhead:first-child{margin-top:0}
+.pub{padding:.85rem 0;border-bottom:1px solid var(--line)}
+.pub__title{font-family:var(--display);font-weight:500;font-size:1.04rem;line-height:1.38}
+.pub__authors{font-family:var(--label-font);font-size:.84rem;color:var(--soft);margin-top:.26rem}
+.pub__authors .me{color:var(--ink);font-weight:700}
+.pub__venue{font-family:var(--label-font);font-size:.8rem;color:var(--faint);margin-top:.2rem}
+.pub__venue .v{color:var(--soft)}.pub__venue .spot{color:var(--accent);font-weight:600}
+.pub__venue a{color:var(--soft);border-bottom-color:color-mix(in srgb,var(--soft) 35%,transparent)}
+.more{margin:1.1rem 0 0;font-family:var(--label-font);font-size:.85rem;color:var(--soft)}
+
+.footer{margin-top:clamp(2.6rem,6vw,3.4rem);padding-top:1.1rem;border-top:1px solid var(--line);
+  font-family:var(--label-font);color:var(--faint);font-size:.83rem}
+
+/* centered */
+.lay-center .header{flex-direction:column;text-align:center;align-items:center}
+.lay-center .links{justify-content:center}
+
+/* sidebar */
+@media(min-width:820px){
+  .lay-side .page{max-width:1000px;display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:clamp(2rem,5vw,3.5rem)}
+  .lay-side .header{grid-column:1;grid-row:1/999;align-self:start;position:sticky;top:2.4rem;
+    flex-direction:column;align-items:flex-start;border-bottom:none;padding-bottom:0;margin-bottom:0}
+  .lay-side .page>*:not(.header){grid-column:2}
+  .lay-side .page>.block:first-of-type{margin-top:0}
 }
-* { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--ink); font-family:var(--serif);
-  font-optical-sizing:auto; font-size:18px; line-height:1.7;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  font-feature-settings:"kern","liga"; }
-::selection { background: var(--accent-tint); }
-a { color:var(--accent); text-decoration:none;
-  border-bottom:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  transition:color .15s, border-color .15s; }
-a:hover { color:var(--accent-deep); border-bottom-color:var(--accent-deep); }
-strong { font-weight:600; }
-.page { width:auto; max-width:var(--maxw); margin:0 auto;
-  padding: clamp(3rem,8vw,5.5rem) clamp(1.4rem,6vw,2.5rem) 3.5rem; }
-@media (min-width:1080px){ .page{ max-width:none; width:clamp(820px,50vw,1180px);} }
+/* boxed */
+.boxed .block{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:1.25rem 1.35rem}
+/* display-xl */
+.display-xl .name{font-size:clamp(2.7rem,8vw,3.9rem)}
 
-.optbadge { position:fixed; top:0; left:0; right:0; text-align:center;
-  font-family:var(--sans); font-size:.8rem; font-weight:600; letter-spacing:.04em;
-  color:#fff; background:var(--accent); padding:.5rem; z-index:9; }
-.page { padding-top: clamp(4rem, 8vw, 6rem); }
-
-.header { display:flex; gap:clamp(1.4rem,4vw,1.9rem); align-items:center;
-  padding-bottom:clamp(1.7rem,4vw,2.2rem); margin-bottom:clamp(1.9rem,4vw,2.5rem);
-  border-bottom:1px solid var(--line); }
-.header__photo { flex:0 0 auto; width:116px; height:116px; }
-.header__photo .ph { width:100%; height:100%; border-radius:4px; display:flex;
-  align-items:center; justify-content:center; background:var(--bg-2);
-  border:1px solid var(--line); color:var(--accent); font-family:var(--display);
-  font-weight:500; font-size:2.05rem; letter-spacing:.02em;
-  box-shadow:0 10px 28px rgba(40,30,20,.13); }
-.header__main { flex:1 1 auto; min-width:0; }
-.name { font-family:var(--display); font-weight:560;
-  font-size:clamp(2.05rem,6vw,2.85rem); line-height:1.05; letter-spacing:-.02em; margin:0 0 .4rem; }
-.name__kr { font-weight:400; font-size:.46em; color:var(--faint); letter-spacing:0; margin-left:.55rem; }
-.role { font-family:var(--sans); font-size:.76rem; font-weight:600; letter-spacing:.15em;
-  text-transform:uppercase; color:var(--soft); margin:0 0 .95rem; }
-.role .dot { color:var(--accent); margin:0 .45em; }
-.links { display:flex; flex-wrap:wrap; align-items:center; gap:.65rem; font-family:var(--sans); font-size:.89rem; }
-.links a { position:relative; color:var(--ink); border-bottom:none; padding-bottom:2px; }
-.links a::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1.5px;
-  background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .2s; }
-.links a:hover { color:var(--accent); } .links a:hover::after { transform:scaleX(1); }
-.links .sep { color:var(--faint); }
-
-.lead { font-size:1.24rem; line-height:1.6; margin:0 0 1.15rem; }
-.bio p { margin:0 0 1.1rem; } .bio p:last-child { margin-bottom:0; }
-
-.block { margin-top:clamp(2.6rem,6vw,3.4rem); }
-.label { display:flex; align-items:center; gap:.7rem; font-family:var(--sans);
-  font-size:.74rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--soft); margin:0 0 1.3rem; }
-.label::before { content:""; width:1.7rem; height:2px; background:var(--accent); flex:0 0 auto; }
-
-.rows { list-style:none; margin:0; padding:0; }
-.rows li { display:grid; grid-template-columns:var(--metaw,3rem) 1fr; gap:.2rem 1.3rem; }
-.rows li + li { margin-top:var(--rowgap,.7rem); }
-.rows .when { font-family:var(--sans); font-size:.78rem; font-weight:600; color:var(--accent);
-  font-variant-numeric:tabular-nums; letter-spacing:.03em; padding-top:.34em; }
-.rows .what .role-t { font-weight:500; } .rows .what .sub { color:var(--soft); }
-.cv { --metaw:8.5rem; --rowgap:1.15rem; }
-.cv .when { text-transform:uppercase; letter-spacing:.06em; font-size:.74rem; }
-
-.pubs { list-style:none; margin:0; padding:0; }
-.pub { padding:1.05rem 0; border-bottom:1px solid var(--line); }
-.pub:first-child { padding-top:0; } .pub:last-child { border-bottom:none; padding-bottom:0; }
-.pub__title { font-family:var(--display); font-weight:500; font-size:1.1rem; line-height:1.4; }
-.pub__authors { font-family:var(--sans); font-size:.85rem; color:var(--soft); margin-top:.3rem; }
-.pub__authors .me { color:var(--ink); font-weight:600; }
-.pub__venue { font-family:var(--sans); font-size:.8rem; color:var(--faint); margin-top:.25rem; }
-.pub__venue .v { color:var(--soft); } .pub__venue .spot { color:var(--accent); font-weight:600; }
-.pub__venue a { color:var(--soft); border-bottom-color:color-mix(in srgb, var(--soft) 35%, transparent); }
-.more { margin:1.2rem 0 0; font-family:var(--sans); font-size:.86rem; color:var(--soft); }
-</style></head><body><div class=optbadge>Option 4 · Modern Sans (plum · Space Grotesk + Inter)</div>
+@media(max-width:540px){
+  .header{gap:1.2rem;align-items:flex-start}
+  .header__photo{width:84px;height:84px}.header__photo .ph{font-size:1.55rem}
+  .rows li{grid-template-columns:1fr;gap:.1rem}.rows .when{padding-top:0}
+  .lead{font-size:1.1rem}
+}
+</style></head><body class='lay-side'><div class=optbadge>Option 4 · Sidebar (green · Fraunces)</div>
   <main class="page">
     <header class="header">
       <div class="header__photo"><div class="ph">SK</div></div>
@@ -88,38 +95,43 @@ strong { font-weight:600; }
           <a href="#">Email</a><span class="sep">·</span>
           <a href="#">GitHub</a><span class="sep">·</span>
           <a href="#">Scholar</a><span class="sep">·</span>
-          <a href="#">LinkedIn</a><span class="sep">·</span>
-          <a href="#">X</a>
+          <a href="#">LinkedIn</a>
         </nav>
       </div>
     </header>
-    <p class="lead">I'm beginning my PhD in Electrical Engineering &amp; Computer Science at MIT
-      this fall, working on machine learning for biology. Before that, I studied statistics at
+    <p class="lead">I'm beginning my PhD in Electrical Engineering &amp; Computer Science at MIT this fall,
+      working on machine learning for biology. Before that, I studied statistics and mathematics at
       Seoul National University.</p>
     <div class="bio">
-      <p>I'm drawn to problems where a methodological idea changes which experiments are worth
-        running. Most of my work so far has been on generative models — in particular,
-        post-training diffusion models through test-time scaling and reinforcement learning —
-        and applying those ideas to biomolecular design.</p>
-      <p>Going forward, I want to build models that make biomedical discovery faster: tightening
-        the loop between forming a hypothesis and designing the experiment that tests it, and
-        carrying information from biological data that is cheap but shallow into the richer,
-        harder-to-scale measurements — with an eye toward precision medicine and cancer.</p>
+      <p>I'm drawn to problems where a methodological idea changes which experiments are worth running.
+        Most of my work has been on generative models — in particular, post-training diffusion models
+        through test-time scaling and reinforcement learning — which I'm now applying to protein
+        structure prediction and biomolecular design.</p>
+      <p>Going forward, I want to build models that make biomedical discovery faster: tightening the loop
+        between forming a hypothesis and designing the experiment that tests it, with an eye toward
+        precision medicine and cancer.</p>
     </div>
-    <section class="block">
-      <h2 class="label">News</h2>
+
+    <section class="block"><h2 class="label">News</h2>
       <ul class="rows">
         <li><span class="when">2026</span><span class="what">Beginning my PhD in EECS at MIT this fall.</span></li>
-        <li><span class="when">2026</span><span class="what">Our work on time-optimal execution of action-chunk policies will appear at <strong>ICLR 2026</strong>.</span></li>
-        <li><span class="when">2025</span><span class="what">“Test-time Alignment of Diffusion Models” was selected as a <strong>Spotlight</strong> at ICLR 2025.</span></li>
+        <li><span class="when">2026</span><span class="what">Two papers at <strong>ICLR 2026</strong> — robot learning, and diffusion fine-tuning for biomolecular design.</span></li>
+        <li><span class="when">2025</span><span class="what">Started a remote collaboration with Sergey Ovchinnikov's lab (MIT) on antibody–antigen structure prediction.</span></li>
+        <li><span class="when">2025</span><span class="what">“Test-time Alignment of Diffusion Models” — <strong>Spotlight</strong> at ICLR 2025.</span></li>
       </ul>
     </section>
-    <section class="block">
-      <h2 class="label">Selected publications</h2>
+
+    <section class="block"><h2 class="label">Selected publications</h2>
       <ul class="pubs">
+        <li class="subhead">Published</li>
         <li class="pub">
           <div class="pub__title">Time-Optimal Execution of Action Chunk Policies Beyond Demonstration Speed</div>
           <div class="pub__authors"><span class="me">Sunwoo Kim</span>, J. Kim, J. J. Lim</div>
+          <div class="pub__venue"><span class="v">ICLR</span> · 2026</div>
+        </li>
+        <li class="pub">
+          <div class="pub__title">Iterative Distillation for Reward-Guided Fine-Tuning of Diffusion Models in Biomolecular Design</div>
+          <div class="pub__authors">X. Su*, X. Li*, M. Uehara*, <span class="me">Sunwoo Kim</span>, Y. Zhao, G. Scalia, …, S. Ji</div>
           <div class="pub__venue"><span class="v">ICLR</span> · 2026</div>
         </li>
         <li class="pub">
@@ -127,15 +139,48 @@ strong { font-weight:600; }
           <div class="pub__authors"><span class="me">Sunwoo Kim</span>, M. Kim, D. Park</div>
           <div class="pub__venue"><span class="v">ICLR</span> · 2025 · <span class="spot">Spotlight</span></div>
         </li>
+        <li class="pub">
+          <div class="pub__title">A Computation-Efficient Method of Measuring Dataset Quality based on the Coverage of the Dataset</div>
+          <div class="pub__authors">B. Kim, J. Kim, K. Kim, <span class="me">Sunwoo Kim</span>, H. Ahn</div>
+          <div class="pub__venue"><span class="v">AISTATS</span> · 2025</div>
+        </li>
+        <li class="subhead">Preprints</li>
+        <li class="pub">
+          <div class="pub__title">Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement</div>
+          <div class="pub__authors">S. Lee, <span class="me">Sunwoo Kim</span>, S. Kim, J. Park, D. Park</div>
+          <div class="pub__venue"><a href="#">arXiv:2511.05562</a> · 2025</div>
+        </li>
       </ul>
-      <p class="more">Full, up-to-date list on <a href="#">Google Scholar</a>.</p>
+      <p class="more">Full list on <a href="#">Google Scholar</a>.</p>
     </section>
-    <section class="block">
-      <h2 class="label">Education</h2>
+
+    <section class="block"><h2 class="label">Experience</h2>
       <ul class="rows cv">
-        <li><span class="when">2026 — present</span><span class="what"><span class="role-t">Ph.D., EECS</span>, MIT <span class="sub">— machine learning for biology</span></span></li>
-        <li><span class="when">— 2026</span><span class="what"><span class="role-t">B.S., Statistics</span>, Seoul National University</span></li>
+        <li><span class="when">2025 — now</span><span class="what"><span class="role-t">Research Collaborator</span>, Ovchinnikov Lab, MIT <span class="sub">(remote) — test-time scaling for antibody–antigen structure prediction</span></span></li>
+        <li><span class="when">2025</span><span class="what"><span class="role-t">Student Researcher</span>, CLVR Lab (Prof. J. J. Lim), KAIST <span class="sub">— robot learning</span></span></li>
+        <li><span class="when">2024</span><span class="what"><span class="role-t">Research Intern</span>, KRAFTON AI <span class="sub">— test-time alignment of diffusion models (ICLR 2025 Spotlight); embodied LM game agents</span></span></li>
+        <li><span class="when">2023 — 24</span><span class="what"><span class="role-t">Student Researcher</span>, CIS Lab (Prof. H. Ahn), KAIST <span class="sub">— safe AI; test-time optimization with probabilistic safety constraints</span></span></li>
+        <li><span class="when">2024 — now</span><span class="what"><span class="role-t">VC Fellow</span>, Sazze Partners <span class="sub">— evaluating startups' ML at a cross-border ($400M AUM) fund</span></span></li>
       </ul>
     </section>
+
+    <section class="block"><h2 class="label">Education</h2>
+      <ul class="rows cv">
+        <li><span class="when">2026 — now</span><span class="what"><span class="role-t">Ph.D., EECS</span>, MIT <span class="sub">(incoming) — ML for biology</span></span></li>
+        <li><span class="when">2022 — 26</span><span class="what"><span class="role-t">B.S., Statistics &amp; Mathematics</span>, Seoul National University</span></li>
+        <li><span class="when">2018 — 22</span><span class="what">Seoul Science High School</span></li>
+      </ul>
+    </section>
+
+    <section class="block"><h2 class="label">Awards</h2>
+      <ul class="rows cv">
+        <li><span class="when">2026</span><span class="what">KFAS Overseas PhD Fellowship</span></li>
+        <li><span class="when">2024</span><span class="what">KRAFTON AI Fellowship</span></li>
+        <li><span class="when">2022</span><span class="what">SNU FastMRI Challenge — 1st place (144 teams)</span></li>
+        <li><span class="when">2022</span><span class="what">Presidential Science Scholarship</span></li>
+      </ul>
+    </section>
+
+    <footer class="footer">© 2026 Sunwoo Kim · Last updated June 2026</footer>
   </main>
 </body></html>

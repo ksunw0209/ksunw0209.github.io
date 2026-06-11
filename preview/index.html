@@ -3,66 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage — design options</title>
+  <title>Homepage — design options (round 2)</title>
   <meta name="robots" content="noindex" />
   <style>
-    :root { color-scheme: light; }
     * { box-sizing: border-box; }
-    body { margin: 0; background: #eceae4; color: #1d1a15;
+    body { margin: 0; background: #ecebe7; color: #1d1a15;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
-    .head { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+    .head { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.5rem 0.5rem; }
     .head h1 { font-size: 1.5rem; margin: 0 0 0.4rem; }
-    .head p { margin: 0; color: #5d574c; }
-    .grid { max-width: 1200px; margin: 0 auto; padding: 1.5rem;
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
-    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    .head p { margin: 0; color: #5d574c; max-width: 70ch; }
+    .grid { max-width: 1280px; margin: 0 auto; padding: 1.5rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+    @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
     .card { background: #fff; border: 1px solid #d9d5cb; border-radius: 10px;
       overflow: hidden; box-shadow: 0 6px 22px rgba(40,30,20,0.07); }
-    .card h2 { font-size: 1.02rem; margin: 0; padding: 0.9rem 1.1rem 0; }
-    .card .meta { padding: 0.15rem 1.1rem 0.8rem; font-size: 0.82rem; color: #6f685c; }
+    .card h2 { font-size: 1rem; margin: 0; padding: 0.85rem 1rem 0; }
+    .card .meta { padding: 0.15rem 1rem 0.75rem; font-size: 0.8rem; color: #6f685c; }
     .card .swatch { display: inline-block; width: 0.78rem; height: 0.78rem; border-radius: 50%;
-      vertical-align: -1px; margin-right: 0.35rem; border: 1px solid rgba(0,0,0,0.1); }
+      vertical-align: -1px; margin-right: 0.35rem; border: 1px solid rgba(0,0,0,0.12); }
     .card a.shot { display: block; border-top: 1px solid #ece9e2; }
     .card img { width: 100%; height: auto; display: block; }
-    .card .open { display: block; padding: 0.7rem 1.1rem; font-size: 0.85rem; font-weight: 600;
+    .card .open { display: block; padding: 0.65rem 1rem; font-size: 0.83rem; font-weight: 600;
       color: #b04e34; text-decoration: none; border-top: 1px solid #ece9e2; }
     .card .open:hover { background: #faf7f2; }
-    .foot { max-width: 1200px; margin: 0 auto; padding: 0.5rem 1.5rem 3rem; color: #6f685c; font-size: 0.85rem; }
+    .foot { max-width: 1280px; margin: 0 auto; padding: 0.5rem 1.5rem 3rem; color: #6f685c; font-size: 0.85rem; }
   </style>
 </head>
 <body>
   <div class="head">
-    <h1>Homepage — design options</h1>
-    <p>Same content &amp; layout, four color + font directions. Click a thumbnail (or “open full preview”) to see it live. Tell me a number — and feel free to mix (e.g. “Option 2 colors with Option 1 fonts”).</p>
+    <h1>Homepage — design options (round 2)</h1>
+    <p>Six new directions, all with the updated content from your CV. Click a thumbnail (or “open full preview”) to view it live. Tell me a number — you can also mix (e.g. “Option 1 layout with Option 6 colors”) or ask me to tweak any one.</p>
   </div>
 
   <div class="grid">
     <div class="card">
-      <h2>Option 1 — Warm Editorial</h2>
-      <div class="meta"><span class="swatch" style="background:#b04e34"></span>Terracotta on cream · <strong>Fraunces</strong> + Inter</div>
-      <a class="shot" href="opt1.html"><img src="shot_opt1.png" alt="Option 1 preview" loading="lazy" /></a>
+      <h2>1 — Swiss Minimal</h2>
+      <div class="meta"><span class="swatch" style="background:#2f4bf0"></span>Indigo on white · Space Grotesk + Inter</div>
+      <a class="shot" href="opt1.html"><img src="shot1.png" alt="Option 1" loading="lazy" /></a>
       <a class="open" href="opt1.html">Open full preview →</a>
     </div>
     <div class="card">
-      <h2>Option 2 — Crisp Academic</h2>
-      <div class="meta"><span class="swatch" style="background:#23436b"></span>Ink navy on white · <strong>Newsreader</strong> + Inter</div>
-      <a class="shot" href="opt2.html"><img src="shot_opt2.png" alt="Option 2 preview" loading="lazy" /></a>
+      <h2>2 — Classic Centered</h2>
+      <div class="meta"><span class="swatch" style="background:#7a3b2e"></span>Sepia on cream · EB Garamond (centered)</div>
+      <a class="shot" href="opt2.html"><img src="shot2.png" alt="Option 2" loading="lazy" /></a>
       <a class="open" href="opt2.html">Open full preview →</a>
     </div>
     <div class="card">
-      <h2>Option 3 — Botanical</h2>
-      <div class="meta"><span class="swatch" style="background:#2f6b54"></span>Deep green on warm white · <strong>Source Serif 4</strong> + Inter</div>
-      <a class="shot" href="opt3.html"><img src="shot_opt3.png" alt="Option 3 preview" loading="lazy" /></a>
+      <h2>3 — Dark Technical</h2>
+      <div class="meta"><span class="swatch" style="background:#54d3c4"></span>Mint on charcoal · Space Grotesk + mono</div>
+      <a class="shot" href="opt3.html"><img src="shot3.png" alt="Option 3" loading="lazy" /></a>
       <a class="open" href="opt3.html">Open full preview →</a>
     </div>
     <div class="card">
-      <h2>Option 4 — Modern Sans</h2>
-      <div class="meta"><span class="swatch" style="background:#7d3350"></span>Plum on light gray · <strong>Space Grotesk</strong> + Inter</div>
-      <a class="shot" href="opt4.html"><img src="shot_opt4.png" alt="Option 4 preview" loading="lazy" /></a>
+      <h2>4 — Sidebar</h2>
+      <div class="meta"><span class="swatch" style="background:#2f6b54"></span>Green · Fraunces (two-column)</div>
+      <a class="shot" href="opt4.html"><img src="shot4.png" alt="Option 4" loading="lazy" /></a>
       <a class="open" href="opt4.html">Open full preview →</a>
+    </div>
+    <div class="card">
+      <h2>5 — Mono Boxed</h2>
+      <div class="meta"><span class="swatch" style="background:#d2401f"></span>Orange · JetBrains Mono (boxed cards)</div>
+      <a class="shot" href="opt5.html"><img src="shot5.png" alt="Option 5" loading="lazy" /></a>
+      <a class="open" href="opt5.html">Open full preview →</a>
+    </div>
+    <div class="card">
+      <h2>6 — Editorial Bold</h2>
+      <div class="meta"><span class="swatch" style="background:#6d2e4e"></span>Plum on cream · Playfair Display + Newsreader</div>
+      <a class="shot" href="opt6.html"><img src="shot6.png" alt="Option 6" loading="lazy" /></a>
+      <a class="open" href="opt6.html">Open full preview →</a>
     </div>
   </div>
 
-  <div class="foot">The colored bar at the top of each preview is just a label — it isn’t part of the design.</div>
+  <div class="foot">The colored bar at the top of each preview is just a label — not part of the design. Photo is a placeholder (“SK”).</div>
 </body>
 </html>
