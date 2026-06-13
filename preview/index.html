@@ -3,84 +3,250 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage — design options (round 2)</title>
   <meta name="robots" content="noindex" />
+  <title>Homepage — 30 design options</title>
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; background: #ecebe7; color: #1d1a15;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
-    .head { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.5rem 0.5rem; }
-    .head h1 { font-size: 1.5rem; margin: 0 0 0.4rem; }
-    .head p { margin: 0; color: #5d574c; max-width: 70ch; }
-    .grid { max-width: 1280px; margin: 0 auto; padding: 1.5rem;
+    .head { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.5rem 0.25rem; }
+    .head h1 { font-size: 1.55rem; margin: 0 0 0.45rem; }
+    .head p { margin: 0; color: #5d574c; max-width: 78ch; }
+    .grouphead { max-width: 1280px; margin: 2.2rem auto 0; padding: 0 1.5rem;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a8276; }
+    .grid { max-width: 1280px; margin: 0.6rem auto 0; padding: 0 1.5rem;
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
     @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
     .card { background: #fff; border: 1px solid #d9d5cb; border-radius: 10px;
-      overflow: hidden; box-shadow: 0 6px 22px rgba(40,30,20,0.07); }
-    .card h2 { font-size: 1rem; margin: 0; padding: 0.85rem 1rem 0; }
-    .card .meta { padding: 0.15rem 1rem 0.75rem; font-size: 0.8rem; color: #6f685c; }
-    .card .swatch { display: inline-block; width: 0.78rem; height: 0.78rem; border-radius: 50%;
+      overflow: hidden; box-shadow: 0 6px 22px rgba(40,30,20,0.07); display: flex; flex-direction: column; }
+    .cap { padding: 0.8rem 1rem 0.7rem; }
+    .cap h3 { font-size: 0.98rem; margin: 0 0 0.15rem; }
+    .meta { font-size: 0.79rem; color: #6f685c; }
+    .swatch { display: inline-block; width: 0.78rem; height: 0.78rem; border-radius: 50%;
       vertical-align: -1px; margin-right: 0.35rem; border: 1px solid rgba(0,0,0,0.12); }
-    .card a.shot { display: block; border-top: 1px solid #ece9e2; }
-    .card img { width: 100%; height: auto; display: block; }
-    .card .open { display: block; padding: 0.65rem 1rem; font-size: 0.83rem; font-weight: 600;
+    .thumb { display: block; height: 300px; overflow: hidden; border-top: 1px solid #ece9e2;
+      background: #fbfaf7; position: relative; }
+    .thumb iframe { width: 1180px; height: 1900px; border: 0; display: block;
+      transform: scale(0.315); transform-origin: top left; pointer-events: none; }
+    .open { display: block; padding: 0.65rem 1rem; font-size: 0.83rem; font-weight: 600;
       color: #b04e34; text-decoration: none; border-top: 1px solid #ece9e2; }
-    .card .open:hover { background: #faf7f2; }
-    .foot { max-width: 1280px; margin: 0 auto; padding: 0.5rem 1.5rem 3rem; color: #6f685c; font-size: 0.85rem; }
+    .open:hover { background: #faf7f2; }
+    .foot { max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.5rem 3rem; color: #6f685c; font-size: 0.85rem; }
   </style>
 </head>
 <body>
   <div class="head">
-    <h1>Homepage — design options (round 2)</h1>
-    <p>Six new directions, all with the updated content from your CV. Click a thumbnail (or “open full preview”) to view it live. Tell me a number — you can also mix (e.g. “Option 1 layout with Option 6 colors”) or ask me to tweak any one.</p>
+    <h1>Homepage — 30 design options</h1>
+    <p>All 30 share the same content (from your CV); they differ in color palette, type, and layout, with palettes drawn from the color-combination references you sent (pastel, vintage/retro, neutral & monochrome, earthy, cool/blue, dark, and color-harmony sets). Each thumbnail is the real page rendered live — click any to open it full. Tell me a number; you can also mix (e.g. “Option 18 layout with Option 30 colors”) or ask me to tweak one.</p>
   </div>
+    <div class="grid">
+    </div>
+    <h2 class="grouphead">Earlier directions (rounds 1–2)</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>1 — Swiss Minimal</h3>
+          <div class="meta"><span class="swatch" style="background:#2f4bf0"></span>Indigo on white · Space Grotesk + Inter</div></div>
+        <a class="thumb" href="opt1.html"><iframe src="opt1.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 1"></iframe></a>
+        <a class="open" href="opt1.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>2 — Classic Centered</h3>
+          <div class="meta"><span class="swatch" style="background:#7a3b2e"></span>Sepia on cream · EB Garamond (centered)</div></div>
+        <a class="thumb" href="opt2.html"><iframe src="opt2.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 2"></iframe></a>
+        <a class="open" href="opt2.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>3 — Dark Technical</h3>
+          <div class="meta"><span class="swatch" style="background:#54d3c4"></span>Mint on charcoal · Space Grotesk + mono</div></div>
+        <a class="thumb" href="opt3.html"><iframe src="opt3.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 3"></iframe></a>
+        <a class="open" href="opt3.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>4 — Sidebar</h3>
+          <div class="meta"><span class="swatch" style="background:#2f6b54"></span>Green · Fraunces (two-column)</div></div>
+        <a class="thumb" href="opt4.html"><iframe src="opt4.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 4"></iframe></a>
+        <a class="open" href="opt4.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>5 — Mono Boxed</h3>
+          <div class="meta"><span class="swatch" style="background:#d2401f"></span>Orange · JetBrains Mono (boxed cards)</div></div>
+        <a class="thumb" href="opt5.html"><iframe src="opt5.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 5"></iframe></a>
+        <a class="open" href="opt5.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>6 — Editorial Bold</h3>
+          <div class="meta"><span class="swatch" style="background:#6d2e4e"></span>Plum on cream · Playfair Display + Newsreader</div></div>
+        <a class="thumb" href="opt6.html"><iframe src="opt6.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 6"></iframe></a>
+        <a class="open" href="opt6.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>7 — Original (live)</h3>
+          <div class="meta"><span class="swatch" style="background:#b04e34"></span>Terracotta on cream · Fraunces — current live design</div></div>
+        <a class="thumb" href="opt7.html"><iframe src="opt7.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 7"></iframe></a>
+        <a class="open" href="opt7.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Pastel</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>8 — Pastel Bloom</h3>
+          <div class="meta"><span class="swatch" style="background:#c76d83"></span>Blush rose · Spectral + Inter (centered)</div></div>
+        <a class="thumb" href="opt8.html"><iframe src="opt8.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 8"></iframe></a>
+        <a class="open" href="opt8.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>9 — Pastel Sage</h3>
+          <div class="meta"><span class="swatch" style="background:#4fa07e"></span>Soft mint-sage · Lora + Inter</div></div>
+        <a class="thumb" href="opt9.html"><iframe src="opt9.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 9"></iframe></a>
+        <a class="open" href="opt9.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>10 — Pastel Periwinkle</h3>
+          <div class="meta"><span class="swatch" style="background:#7b7fd6"></span>Lavender · Newsreader + Inter (centered)</div></div>
+        <a class="thumb" href="opt10.html"><iframe src="opt10.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 10"></iframe></a>
+        <a class="open" href="opt10.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Vintage & retro</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>11 — Vintage Sepia</h3>
+          <div class="meta"><span class="swatch" style="background:#9a6b34"></span>Aged amber paper · EB Garamond</div></div>
+        <a class="thumb" href="opt11.html"><iframe src="opt11.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 11"></iframe></a>
+        <a class="open" href="opt11.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>12 — Retro Mustard</h3>
+          <div class="meta"><span class="swatch" style="background:#c8902a"></span>70s mustard + brown · Space Grotesk + DM Sans (boxed)</div></div>
+        <a class="thumb" href="opt12.html"><iframe src="opt12.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 12"></iframe></a>
+        <a class="open" href="opt12.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>13 — Retro Rust</h3>
+          <div class="meta"><span class="swatch" style="background:#b5532a"></span>Rust on warm cream · Bitter</div></div>
+        <a class="thumb" href="opt13.html"><iframe src="opt13.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 13"></iframe></a>
+        <a class="open" href="opt13.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Neutral & monochrome</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>14 — Monochrome Ink</h3>
+          <div class="meta"><span class="swatch" style="background:#161616"></span>Pure grayscale, black accent · Libre Franklin (boxed)</div></div>
+        <a class="thumb" href="opt14.html"><iframe src="opt14.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 14"></iframe></a>
+        <a class="open" href="opt14.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>15 — Warm Greige</h3>
+          <div class="meta"><span class="swatch" style="background:#7a6a55"></span>Taupe neutral · Source Serif 4 + Inter</div></div>
+        <a class="thumb" href="opt15.html"><iframe src="opt15.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 15"></iframe></a>
+        <a class="open" href="opt15.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>16 — Cool Slate</h3>
+          <div class="meta"><span class="swatch" style="background:#46627e"></span>Cool gray + slate blue · IBM Plex Sans (sidebar)</div></div>
+        <a class="thumb" href="opt16.html"><iframe src="opt16.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 16"></iframe></a>
+        <a class="open" href="opt16.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>17 — Stone (monochromatic)</h3>
+          <div class="meta"><span class="swatch" style="background:#8a7a5f"></span>Single-hue stone · Spectral</div></div>
+        <a class="thumb" href="opt17.html"><iframe src="opt17.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 17"></iframe></a>
+        <a class="open" href="opt17.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Natural & earthy</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>18 — Forest & Moss</h3>
+          <div class="meta"><span class="swatch" style="background:#3d6b48"></span>Deep forest green · Fraunces + Inter (sidebar)</div></div>
+        <a class="thumb" href="opt18.html"><iframe src="opt18.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 18"></iframe></a>
+        <a class="open" href="opt18.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>19 — Clay & Sand</h3>
+          <div class="meta"><span class="swatch" style="background:#b5663f"></span>Warm clay earth tone · Lora</div></div>
+        <a class="thumb" href="opt19.html"><iframe src="opt19.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 19"></iframe></a>
+        <a class="open" href="opt19.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>20 — Ocean Driftwood</h3>
+          <div class="meta"><span class="swatch" style="background:#2f7073"></span>Teal + warm sand · Newsreader</div></div>
+        <a class="thumb" href="opt20.html"><iframe src="opt20.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 20"></iframe></a>
+        <a class="open" href="opt20.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Cool & blue</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>21 — Deep Navy</h3>
+          <div class="meta"><span class="swatch" style="background:#1f3b66"></span>Classic academic navy · EB Garamond (centered)</div></div>
+        <a class="thumb" href="opt21.html"><iframe src="opt21.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 21"></iframe></a>
+        <a class="open" href="opt21.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>22 — Royal Cobalt</h3>
+          <div class="meta"><span class="swatch" style="background:#2547d0"></span>Vivid cobalt modern · Space Grotesk + Inter</div></div>
+        <a class="thumb" href="opt22.html"><iframe src="opt22.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 22"></iframe></a>
+        <a class="open" href="opt22.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>23 — Teal Modern</h3>
+          <div class="meta"><span class="swatch" style="background:#0e8b8b"></span>Bright teal · Manrope</div></div>
+        <a class="thumb" href="opt23.html"><iframe src="opt23.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 23"></iframe></a>
+        <a class="open" href="opt23.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Dark & high-contrast</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>24 — Midnight Amber</h3>
+          <div class="meta"><span class="swatch" style="background:#e0a23a"></span>Dark navy + amber · Newsreader + Inter</div></div>
+        <a class="thumb" href="opt24.html"><iframe src="opt24.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 24"></iframe></a>
+        <a class="open" href="opt24.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>25 — Carbon Lime</h3>
+          <div class="meta"><span class="swatch" style="background:#b6e23a"></span>Near-black + electric lime · Space Grotesk + mono</div></div>
+        <a class="thumb" href="opt25.html"><iframe src="opt25.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 25"></iframe></a>
+        <a class="open" href="opt25.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>26 — Plum Noir</h3>
+          <div class="meta"><span class="swatch" style="background:#e0709e"></span>Dark plum + pink · Playfair Display + Inter</div></div>
+        <a class="thumb" href="opt26.html"><iframe src="opt26.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 26"></iframe></a>
+        <a class="open" href="opt26.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>27 — Ink Blue Night</h3>
+          <div class="meta"><span class="swatch" style="background:#5aa9f0"></span>Deep blue-black + sky · IBM Plex Sans + mono</div></div>
+        <a class="thumb" href="opt27.html"><iframe src="opt27.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 27"></iframe></a>
+        <a class="open" href="opt27.html">Open full preview →</a>
+      </div>
+    </div>
+    <h2 class="grouphead">Color harmony & special</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="cap"><h3>28 — Complementary Blue/Orange</h3>
+          <div class="meta"><span class="swatch" style="background:#e8742a"></span>Navy ink + orange accent (complementary) · Schibsted Grotesk + Inter</div></div>
+        <a class="thumb" href="opt28.html"><iframe src="opt28.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 28"></iframe></a>
+        <a class="open" href="opt28.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>29 — Triadic Berry</h3>
+          <div class="meta"><span class="swatch" style="background:#b13a6a"></span>Berry on warm cream, large display · DM Serif Display + Inter (centered)</div></div>
+        <a class="thumb" href="opt29.html"><iframe src="opt29.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 29"></iframe></a>
+        <a class="open" href="opt29.html">Open full preview →</a>
+      </div>
+      <div class="card">
+        <div class="cap"><h3>30 — Gradient Aurora</h3>
+          <div class="meta"><span class="swatch" style="background:#6d5ae0"></span>Subtle gradient wash + violet · Sora + Inter (centered)</div></div>
+        <a class="thumb" href="opt30.html"><iframe src="opt30.html" scrolling="no" loading="lazy" tabindex="-1" title="Option 30"></iframe></a>
+        <a class="open" href="opt30.html">Open full preview →</a>
+      </div>
+    </div>
 
-  <div class="grid">
-    <div class="card">
-      <h2>1 — Swiss Minimal</h2>
-      <div class="meta"><span class="swatch" style="background:#2f4bf0"></span>Indigo on white · Space Grotesk + Inter</div>
-      <a class="shot" href="opt1.html"><img src="shot1.png" alt="Option 1" loading="lazy" /></a>
-      <a class="open" href="opt1.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>2 — Classic Centered</h2>
-      <div class="meta"><span class="swatch" style="background:#7a3b2e"></span>Sepia on cream · EB Garamond (centered)</div>
-      <a class="shot" href="opt2.html"><img src="shot2.png" alt="Option 2" loading="lazy" /></a>
-      <a class="open" href="opt2.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>3 — Dark Technical</h2>
-      <div class="meta"><span class="swatch" style="background:#54d3c4"></span>Mint on charcoal · Space Grotesk + mono</div>
-      <a class="shot" href="opt3.html"><img src="shot3.png" alt="Option 3" loading="lazy" /></a>
-      <a class="open" href="opt3.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>4 — Sidebar</h2>
-      <div class="meta"><span class="swatch" style="background:#2f6b54"></span>Green · Fraunces (two-column)</div>
-      <a class="shot" href="opt4.html"><img src="shot4.png" alt="Option 4" loading="lazy" /></a>
-      <a class="open" href="opt4.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>5 — Mono Boxed</h2>
-      <div class="meta"><span class="swatch" style="background:#d2401f"></span>Orange · JetBrains Mono (boxed cards)</div>
-      <a class="shot" href="opt5.html"><img src="shot5.png" alt="Option 5" loading="lazy" /></a>
-      <a class="open" href="opt5.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>6 — Editorial Bold</h2>
-      <div class="meta"><span class="swatch" style="background:#6d2e4e"></span>Plum on cream · Playfair Display + Newsreader</div>
-      <a class="shot" href="opt6.html"><img src="shot6.png" alt="Option 6" loading="lazy" /></a>
-      <a class="open" href="opt6.html">Open full preview →</a>
-    </div>
-    <div class="card">
-      <h2>7 — Original</h2>
-      <div class="meta"><span class="swatch" style="background:#b04e34"></span>Terracotta on cream · Fraunces (current live design)</div>
-      <a class="shot" href="opt7.html"><img src="shot7.png" alt="Option 7" loading="lazy" /></a>
-      <a class="open" href="opt7.html">Open full preview →</a>
-    </div>
-  </div>
-
-  <div class="foot">The colored bar at the top of each preview is just a label — not part of the design. Photo is a placeholder (“SK”).</div>
+  <div class="foot">The colored bar at the top of each preview is just a label, not part of the design. Photo is a placeholder (“SK”). Web fonts load live, so previews look best on the deployed site (or with a network connection).</div>
 </body>
 </html>
